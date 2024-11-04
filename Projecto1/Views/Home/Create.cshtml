@@ -1,0 +1,59 @@
+﻿@model Projecto1.Models.Contact
+@{
+    ViewData["Title"] = "Create new  CONTACT";
+}
+
+<h1 class="text-center">Create Contact</h1>
+<div class="container mt-4">
+   
+    <div class="row">
+        <div class="offset-9 col-3 mb-3">
+            <a asp-action="Index" asp-controller="Home" class="btn btn-outline-secondary d-block btn-lg mx-auto">
+                <i class="fa-solid fa-backward"></i> Back
+            </a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="offset-12">
+            <div class="card border">
+                <div class="card-header bg-dark">
+                    <h3 class="text-white">
+                        <strong>
+                            Create Contact
+                        </strong>
+                    </h3>
+                </div>
+                <div class="card body">
+                    <form asp-action="Create" method="post">
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                        <div class="form-group">
+                            <label asp-for="Nombre" class="control-label"></label>
+                            <input asp-for="Nombre" class="form-control" placeholder="Instert Name"/>
+                            <span asp-validation-for="Nombre" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Telefono" class="control-label"></label>
+                            <input asp-for="Telefono" class="form-control" placeholder="Instert Phone" />
+                            <span asp-validation-for="Telefono" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Email" class="control-label"></label>
+                            <input asp-for="Email" class="form-control" placeholder="Instert Email" />
+                            <span asp-validation-for="Email" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group mt-3">
+                            <button type="submit" class="btn btn-secondary d-block mx-auto">
+                                <i class="fa fa-user" aria-hidden="true"></i> Create
+                            </button>
+
+                        </div>
+                    </form>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
